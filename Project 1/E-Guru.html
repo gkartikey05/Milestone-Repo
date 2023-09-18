@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E GURU</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    header{
+      max-width: 1200px;
+      width: 100%;
+      margin: auto;
+    }
+    nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 15px;
+    }
+    nav > div{
+      gap: 10px;
+    }
+    .logo{
+      display: flex;
+    }
+    .logo > img{
+      width: 50px;
+      height: 40px;
+      
+    }
+    .logo > p{
+      font-weight: bold;
+      font-size: 24px;
+    }
+    ul{
+      display: flex;
+      gap: 70px;
+      list-style: none;
+      font-size: 16px;
+      color: gray;
+    }
+    li{
+      font: bold;
+    }
+    li:hover{
+      color: orangered;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    nav > button{
+      padding: 20px 45px;
+      background-color: transparent;
+      border: 1px solid #000000;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    nav > button:hover{
+      cursor: pointer;
+      background-color: #567de6;
+      color: #ffffff;
+    }
+    main{
+      display: flex;
+      max-width: 1200px;
+      width: 100%;
+      margin-top: 50px;
+    }
+    .content{
+      margin-top: 30px;
+      width: 60%;
+    }
+    .content > h1{
+      font-size: 60px;
+      margin: 0;
+    }
+    .box{
+      height: 25px;
+    }
+    .content > p{
+      font-size: 22px;
+      color: #696969;
+      margin: 0;
+    }
+    .images{
+      align-items: center;
+      flex-wrap: nowrap;
+      width: 40%;
+      /* position: absolute; */
+      margin-right: 15px;
+    }
+    .person{
+      position: relative;
+    }
+    footer{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      max-width: 100vw;
+      width: 100%;
+      height: 300px;
+      background-color: #341d55;
+      color: #ffffff;
+    }
+    .reason{
+      width: 250px;
+      height: 100px;
+    }
+    .reason > h1{
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    .boxes{
+      width: 200px;
+      height: 100px;
+    }
+    .about{
+      color: #ababab;
+    }
+    .vector3{
+      height: 20px;
+      width: 20px;
+      background-color: #7fffd4;
+      padding: 12px;
+      border-radius: 8px;
+    }
+    .vector2{
+      width: 20px;
+      background-color: #ff6e39;
+      padding: 9px 12px;
+      border-radius: 8px;
+    }
+    .vector1{
+      height: 20px;
+      width: 20px;
+      background-color: #6161e9;
+      padding: 12px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="./assets/logo.png" alt="logo">
+        <p>E GURU</p>
+      </div>
+      <ul>
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Features</li>
+        <li>How it works</li>
+      </ul>
+      <button>Sign Up</button>
+    </nav>
+    <main>
+      <div class="content">
+        <h1>STUDY FROM</h1>
+        <br/>
+        <h1>HOME WITH EXPERT</h1>
+        <div class="box">
+          <p>A learning system based on formalised</p>
+          <br/>
+          <p>teaching with the help of resources.</p>
+        </div>
+        <div>
+          <button>Get Started</button>
+          <button>Learn More</button>
+        </div>
+      </div>
+      <div class="images">
+        <img src="./assets/main-image.png" alt="Person" class="person">
+        <img src="./assets/main-image-bg.png" alt="Background" class="background">
+        <img src="./assets/main-image-pattern.png" alt="Pattern" class="pattern">
+        <img src="./assets/curve-arrow.png" alt="curve-arrow" class="ca"> 
+        <img src="./assets/green-arrow.png" alt="green-arrow" class="ga">
+        <img src="./assets/orange-arrow.png" alt="orange-arrow" class="oa">
+      </div>
+    </main>
+  </header>
+  <footer>
+    <div class="reason">
+      <h1>WHY WE ARE</h1>
+      <br/>
+      <h1>THE BEST</h1>
+      <p class="about">a learning system based on formalised teaching with help of....</p>
+    </div>
+    <div class="boxes">
+      <img src="./assets/vector3.png" alt="vector3" class="vector3">
+      <h4>EXPERT TEACHER</h4>
+      <p class="about">a learning system based on formalised teaching</p>
+    </div>
+    <div class="boxes">
+      <img src="./assets/vector2.png" alt="vector2" class="vector2">
+      <h4>ONLINE COURSES</h4>
+      <p class="about">a learning system based on formalised teaching</p>
+    </div>
+    <div class="boxes">
+      <img src="./assets/vector1.png" alt="vector1" class="vector1">
+      <h4>24/7 SUPPORT</h4>
+      <p class="about">a learning system based on formalised teaching</p>
+    </div>
+  </footer>
+</body>
+</html>

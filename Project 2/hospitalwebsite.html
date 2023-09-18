@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <title>Hospital Website</title>
+  <style>
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    section > img {
+      width: 100%;
+
+    }
+    .content-1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .about {
+      text-align: center;
+      margin-top: 100px;
+    }
+    .about > h1 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+    .about > p {
+      font-size: 16px;
+      color: grey;
+      margin: 5px;
+    }
+    .card-1 {
+      display: flex;
+      justify-content: center;
+      margin-top: 100px;
+    }
+    .card1-logo {
+      width: 200px;
+      display: flex;
+      align-items: center;
+      background-color: #90b4f6;
+      margin: 0 15px;
+      padding: 25px 40px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border: 1px solid #aadcff;
+    }
+    .card1-logo > img {
+      width: 30px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 50%;
+    }
+    .card1-logo > p {
+      display: inline;
+      font-weight: bold;
+      color: #fff;
+      margin-left: 15px;
+    }
+    .text {
+      width: 200px;
+      border: 1px solid #aadcff;
+      border-top: none;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      list-style: none;
+      color: #808080;
+      padding: 30px 40px;
+      margin: 0 15px 100px 15px;
+    }
+    li {
+      margin-left: 5px;
+      margin-bottom: 5px;
+    }
+    .learn-more {
+      margin-bottom: 0;
+      font-weight: bold;
+      color: #6890e6;
+      display: inline;
+    }
+    .learn-more:hover {
+      cursor: pointer;
+    }
+    .comment-box {
+      display: flex;
+      justify-content: center;
+    }
+    .card-2 {
+      width: 200px;
+      align-content: space-evenly;
+      margin: 0 15px;
+      margin-top: 100px;
+      padding: 25px 40px;
+      border-radius: 5px;
+      border: 2px solid #e3e3e3;
+      margin-bottom: 100px;
+    }
+    .card-2 > img {
+      width: 120px;
+    }
+    .user {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+    .faq {
+      margin-bottom: 100px;
+    }
+    .card-3 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: start;
+      margin: 0 150px;
+    }
+    .card3-card {
+      width: 250px;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 30px 30px 0;
+      padding-right: 40px;
+    }
+    .card3-card > i {
+      color: #6890e6;
+      margin-right: 20px;
+    }
+    .card3-card > div > h4 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      width: 250px;
+    }
+    .card3-card > div > p {
+      margin-top: 0;
+      margin-bottom: 50px;
+      width: 250px;
+    }
+    .content-4 {
+      margin-bottom: 100px;
+    }
+    .card-4 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 2px;
+    }
+    .card4-card {
+      width: 300px;
+      margin-top: 100px;
+      border: 2px solid #6890e6;
+      border-radius: 10px;
+    }
+    .card4-card > h3 {
+      font-size: 23px;
+      margin-top: 50px;
+      margin-bottom: 35px;
+    }
+    .card4-card > p {
+      color: grey;
+      margin-top: 0;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .price {
+      display: flex;
+      justify-content: center;
+      text-align: left;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .price > h2 {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 35px;
+      margin: 20px 5px 20px 10px;
+      color: #3e6de4;
+    }
+    .price-tag {
+      margin-top: 15px;
+      color: #3e6de4;
+    }
+    .price-tag > p {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    .list {
+      display: flex;
+      justify-content: start;
+      gap: 10px;
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+    .list > img {
+      width: 30px;
+      height: 30px;
+      align-self: center;
+      border-radius: 50%;
+    }
+    .support {
+      text-align: left;
+    }
+    .card5-card {
+      width: 300px;
+      margin-top: 70px;
+      border: 2px solid #6890e6;
+      border-radius: 10px;
+      background-color: #050534;
+      color: #fff;
+    }
+    .card5-card > h3 {
+      font-size: 23px;
+      margin-top: 50px;
+      margin-bottom: 35px;
+    }
+    .card5-card > p {
+      margin-top: 0;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .card-button {
+      margin-top: 20px;
+      margin-bottom: 40px;
+      padding: 15px 75px 15px 75px;
+      font-weight: bold;
+      background-color: #61a6f4;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+    .newsletter {
+      width: 100%;
+      padding: 50px 0px 50px 0;
+      display: flex;
+      justify-content: space-evenly;
+      background-color: #1e1e3c;
+      color: #fff;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      gap: 0;
+    }
+    .left-content {
+      width: 30%;
+    }
+    .right-content {
+      width: 30%;
+      align-self: center;
+    }
+    .right-content > input {
+      padding: 18px 100px 18px 18px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border: 1px solid #808080;
+      border-right: none;
+    }
+    .right-content > button {
+      margin-left: -5px;
+      padding: 18px 20px 18px 18px;
+      background-color: #61a6f4;
+      color: #fff;
+      font-weight: bold;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border: 1px solid #808080;
+      border-left: none;
+    }
+    .right-content > button:hover {
+      cursor: pointer;
+      color: blue;
+      font-weight: bolder;
+    }
+    .right-content > button:focus {
+      color: black;
+      background-color: grey;
+      text-decoration: underline;
+    }
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+    }
+    .card-6 {
+      width: 200px;
+      margin-top: 70px;
+    }
+    .card-6 > h3 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    .card-6 > p {
+      color: #808080;
+      margin-top: 0;
+    }
+    .card-6 > ul {
+      list-style: none;
+      margin-left: -40px;
+      
+    }
+    .card-6 > ul > li {
+      color: #808080;
+      margin-bottom: 15px;
+    }
+    .card-6 > ul > li:hover {
+      color: #4b62d4;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .logo > img {
+      width: 22px;
+      height: 22px;
+      margin-right: 17px;
+    }
+    .logo > img:hover {
+      cursor: pointer;
+    }
+    .bottom-line {
+      text-align: center;
+      color: #808080;
+      margin-top: 100px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <section class="heading">
+    <img src="./assets/background.png" alt="background">
+    <div class="header">
+      <p>BrandName</p>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Product</li>
+          <li>Pricing</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+      <button>Get Quote Now --></button>
+    </div>
+    <div>
+      <div class="right">
+        <h1>Meet the Best Hospital</h1>
+        <p>We know how large objects will act,</p>
+        <br/>
+        <p>but things on a small scale.</p>
+        <ul class="buttons">
+          <li>Get Quote Now</li>
+          <li>Learn More</li>
+        </ul>
+      </div>
+      <div class="left">
+        <form action="" method="get">
+          <p></p>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email">
+          <label for="Department">Department</label>
+          <select name="Department" id="Department">
+            <option value="Please Select">Please Select</option>
+            <option value="Cardiology">Cardiology</option>
+            <option value="Radiography">Radiography</option>
+            <option value="Gyanecologist">Gyanecologist</option>
+            <option value="Dental">Dental</option>
+            <option value="Neuro">Neuro</option>
+          </select>
+          <label for="time">Time</label>
+          <select name="time" id="time">
+            <option value="4:00 Available">4:00 Available</option>
+            <option value="5:00 Available">5:00 Available</option>
+            <option value="6:00 Available">6:00 Available</option>
+            <option value="7:00 Available">7:00 Available</option>
+            <option value="8:00 Available">8:00 Available</option>
+          </select>
+          <button>Book Appointment</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <main class="content-1">
+    <div class="about">
+      <h1>Leading Medicine</h1>
+      <p>Problems trying to resolve the conflict between</p>
+      <p>the two major realms of Classical physics: Newtonian mechanics</p>
+    </div>
+    <div class="card-1">
+      <div>
+        <header class="card1-logo">
+          <img src="./assets/logo.png" alt="">
+          <p>Emergency Case</p>
+        </header>
+        <ul class="text">
+          <li>- The best product starts</li>
+          <li>with Figma.</li>
+          <li>- Design with real data.</li>
+          <li>- Lightning fast prototyping.</li>
+          <li>- Fastest way to organize.</li>
+          <li>- Work at the speed of thought.</li>
+          <li class="learn-more">Learn More</li>
+        </ul>
+      </div>
+      <div>
+        <header class="card1-logo">
+          <img src="./assets/logo.png" alt="">
+          <p>Cancer Care</p>
+        </header>
+        <ul class="text">
+          <li>- The best product starts</li>
+          <li>with Figma.</li>
+          <li>- Design with real data.</li>
+          <li>- Lightning fast prototyping.</li>
+          <li>- Fastest way to organize.</li>
+          <li>- Work at the speed of thought.</li>
+          <li class="learn-more">Learn More</li>
+        </ul>
+      </div>
+      <div>
+        <header class="card1-logo">
+          <img src="./assets/logo.png" alt="">
+          <p>Health Queries</p>
+        </header>
+        <ul class="text">
+          <li>- The best product starts</li>
+          <li>with Figma.</li>
+          <li>- Design with real data.</li>
+          <li>- Lightning fast prototyping.</li>
+          <li>- Fastest way to organize.</li>
+          <li>- Work at the speed of thought.</li>
+          <li class="learn-more">Learn More</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <main class="content-2">
+    <div class="about">
+      <h1>Leading Medicine</h1>
+      <p>Problems trying to resolve the conflict between</p>
+      <p>the two major realms of Classical physics: Newtonian mechanics</p>
+    </div>
+    <div class="comment-box">
+      <div class="card-2">
+        <img src="./assets/rating.jpg" alt="">
+        <p>Slate helps you see how many more days you need to work to reach you financial goal.</p>
+        <img src="./assets/#user.1.jpg" alt="user 1" class="user">
+      </div>
+      <div class="card-2">
+        <img src="./assets/rating.jpg" alt="">
+        <p>Slate helps you see how many more days you need to work to reach you financial goal.</p>
+        <img src="./assets/#user.2.jpg" alt="user 2" class="user">
+      </div>
+      <div class="card-2">
+        <img src="./assets/rating.jpg" alt="">
+        <p>Slate helps you see how many more days you need to work to reach you financial goal.</p>
+        <img src="./assets/#user.3.jpg" alt="user 3" class="user">
+      </div>
+    </div>
+  </main>
+
+  <main class="content-3">
+    <div class="about faq">
+      <h1>FAQ</h1>
+      <p>Problems trying to resolve the conflict between</p>
+      <p>the two major realms of Classical physics: Newtonian mechanics</p>
+    </div>
+    <div class="card-3">
+      <div class="card3-card">
+        <i class="fa-solid fa-chevron-right"></i>
+        <div>
+          <h4>the quick fox jumps over the lazy dog</h4>
+          <p>Things on a very small scale behave like nothing</p>
+        </div>
+      </div>
+      <div class="card3-card">
+        <i class="fa-solid fa-chevron-right"></i>
+        <div>
+          <h4>the quick fox jumps over the lazy dog</h4>
+          <p>Things on a very small scale behave like nothing</p>
+        </div>
+      </div>
+      <div class="card3-card">
+        <i class="fa-solid fa-chevron-right"></i>
+        <div>
+          <h4>the quick fox jumps over the lazy dog</h4>
+          <p>Things on a very small scale behave like nothing</p>
+        </div>
+      </div>
+      <div class="card3-card">
+        <i class="fa-solid fa-chevron-right"></i>
+        <div>
+          <h4>the quick fox jumps over the lazy dog</h4>
+          <p>Things on a very small scale behave like nothing</p>
+        </div>
+      </div>
+      <div class="card3-card">
+        <i class="fa-solid fa-chevron-right"></i>
+        <div>
+          <h4>the quick fox jumps over the lazy dog</h4>
+          <p>Things on a very small scale behave like nothing</p>
+        </div>
+      </div>
+      <div class="card3-card">
+        <i class="fa-solid fa-chevron-right"></i>
+        <div>
+          <h4>the quick fox jumps over the lazy dog</h4>
+          <p>Things on a very small scale behave like nothing</p>
+        </div>
+      </div>
+      <div class="card3-card">
+        <i class="fa-solid fa-chevron-right"></i>
+        <div>
+          <h4>the quick fox jumps over the lazy dog</h4>
+          <p>Things on a very small scale behave like nothing</p>
+        </div>
+      </div>
+      <div class="card3-card">
+        <i class="fa-solid fa-chevron-right"></i>
+        <div>
+          <h4>the quick fox jumps over the lazy dog</h4>
+          <p>Things on a very small scale behave like nothing</p>
+        </div>
+      </div>
+      <div class="card3-card">
+        <i class="fa-solid fa-chevron-right"></i>
+        <div>
+          <h4>the quick fox jumps over the lazy dog</h4>
+          <p>Things on a very small scale behave like nothing</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <main class="content-4">
+    <div class="about">
+      <h1>Pricing</h1>
+      <p>Problems trying to resolve the conflict between</p>
+      <p>the two major realms of Classical physics: Newtonian mechanics</p>
+    </div>
+    <div class="card-4">
+      <div class="card4-card">
+        <h3>FREE</h3>
+        <p>Organize across all</p>
+        <p>apps by hand</p>
+        <div class="price">
+          <h2>0</h2>
+          <div class="price-tag">
+            <p><b>$</b></p>
+            <p>Per Month</p>
+          </div>  
+        </div>
+        <div class="list">
+          <img src="./assets/check mark.png" alt="">
+          <p>Unlimited product updates</p>
+        </div>
+        <div class="list">
+          <img src="./assets/check mark.png" alt="">
+          <p>Unlimited product updates</p>
+        </div>
+        <div class="list">
+          <img src="./assets/check mark.png" alt="">
+          <p>Unlimited product updates</p>
+        </div>
+        <div class="list">
+          <img src="./assets/check mark grey.png" alt="">
+          <p>1GB Cloud storage</p>
+        </div>
+        <div class="list">
+          <img src="./assets/check mark grey.png" alt="">
+          <p class="support">Email and community support</p>
+        </div>
+        <button class="card-button">Try for free</button>
+      </div>
+
+      <div class="card5-card">
+        <h3>STANDARD</h3>
+        <p>Organize across all</p>
+        <p>apps by hand</p>
+        <div class="price">
+          <h2>9.99</h2>
+          <div class="price-tag">
+            <p><b>$</b></p>
+            <p>Per Month</p>
+          </div>  
+        </div>
+        <div class="list">
+          <img src="./assets/check mark.png" alt="">
+          <p>Unlimited product updates</p>
+        </div>
+        <div class="list">
+          <img src="./assets/check mark.png" alt="">
+          <p>Unlimited product updates</p>
+        </div>
+        <div class="list">
+          <img src="./assets/check mark.png" alt="">
+          <p>Unlimited product updates</p>
+        </div>
+        <div class="list">
+          <img src="./assets/check mark.png" alt="">
+          <p>1GB Cloud storage</p>
+        </div>
+        <div class="list">
+          <img src="./assets/check mark.png" alt="">
+          <p class="support">Email and community support</p>
+        </div>
+        <button class="card-button">Try for free</button>
+      </div>
+
+      <div class="card4-card">
+        <h3>PREMIUM</h3>
+        <p>Organize across all</p>
+        <p>apps by hand</p>
+        <div class="price">
+          <h2>19.99</h2>
+          <div class="price-tag">
+            <p><b>$</b></p>
+            <p>Per Month</p>
+          </div>  
+        </div>
+        <div class="list">
+          <img src="./assets/check mark.png" alt="">
+          <p>Unlimited product updates</p>
+        </div>
+        <div class="list">
+          <img src="./assets/check mark.png" alt="">
+          <p>Unlimited product updates</p>
+        </div>
+        <div class="list">
+          <img src="./assets/check mark.png" alt="">
+          <p>Unlimited product updates</p>
+        </div>
+        <div class="list">
+          <img src="./assets/check mark.png" alt="">
+          <p>1GB Cloud storage</p>
+        </div>
+        <div class="list">
+          <img src="./assets/check mark.png" alt="">
+          <p class="support">Email and community support</p>
+        </div>
+        <button class="card-button">Try for free</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="content-5">
+    <div class="newsletter">
+      <div class="left-content">
+        <h1>Get In Touch</h1>
+        <p>The gradual accumulation of information about atomic and small scale behaviour during the first quarter of the 20th</p>
+      </div>
+      <div class="right-content">
+        <input type="email" placeholder="Your Email">
+        <button class="subscribe">Subscribe</button>
+      </div>
+    </div>
+    <div class="nav-links">
+      <div class="card-6">
+        <h3>Get In Touch</h3>
+        <p>the quick fox jumps over the lazy dog</p>
+        <div class="logo">
+          <img src="./assets/facebook.png" alt=""/>
+          <img src="./assets/instagram.png" alt=""/>
+          <img src="./assets/twitter.png" alt=""/>
+        </div>
+      </div>
+      <div class="card-6">
+        <h3>Company info</h3>
+        <ul>
+          <li>About Us</li>
+          <li>Career</li>
+          <li>We are hiring</li>
+          <li>Blog</li>
+        </ul>
+      </div>
+      <div class="card-6">
+        <h3>Features</h3>
+        <ul>
+          <li>Business Marketing</li>
+          <li>User Analytic</li>
+          <li>live Chats</li>
+          <li>Unlimited Supports</li>
+        </ul>
+      </div>
+      <div class="card-6">
+        <h3>Resources</h3>
+        <ul>
+          <li>ISO & Android</li>
+          <li>Watch a Demo</li>
+          <li>Customers</li>
+          <li>API</li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-line">
+      <p>Made With Love By Figmaland All Right Reserved</p>
+    </div>
+  </footer>
+</body>
+</html>
